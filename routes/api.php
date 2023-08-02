@@ -19,6 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-// Route::middleware([])->prefix('v1')->group(function () {
-//     Route::post('/email', [\App\Http\Controllers\API\V1\EmailController::class, 'store'])->name('email.store');
-// });
+Route::middleware([])->prefix('v1')->group(function () {
+    Route::post('/email', [\App\Http\Controllers\API\V1\EmailController::class, 'store'])->name('email.store');
+});
